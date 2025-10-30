@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สมัครสมาชิก</title>
+</head>
+
+<body class="ibm-plex-sans-thai-regular">
+    <main class="container">
+        <div class="row justify-content-center mt-3">
+            <div class="col-sm-12 col-md-8 col-lg-6">
+                <div class="row justify-content-center">
+                    <div class="col-9">
+                        <img src="assets/imgs/logo.png" alt="logo" class="img-fluid">
+                    </div>
+                </div>
+                <div class="row p2 mt-3">
+                    <div class="col-12">
+                        <div class="card border-0 p-2 shadow">
+                            <div class="card-body">
+                                <div class="card-title border-0 text-center">
+                                    <h4>สมัครสมาชิก</h4>
+                                </div>
+                                <form id="registerForm" method="POST" class="needs-validation mb-0" novalidate>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-floating mb-3">
+                                                <input type="text" name="username" id="username" required placeholder=""
+                                                    autocomplete="off" class="form-control ">
+                                                <label for="empCode">Username <span class="text-danger">*</span></label>
+                                                <div class="invalid-feedback">
+                                                    กรุณากรอก Username
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-6 col-lg-6">
+                                            <span>รหัสผ่าน <span class="text-danger">*</span>
+                                            <div class="input-group has-validation mb-3">                                                
+                                                <input type="password" name="password" id="password" required
+                                                     autocomplete="off" placeholder="รหัสผ่าน" class="form-control form-control-lg fs-6">
+                                                <button type="button" id="BtnPass"
+                                                    class="btn btn-outline-secondary border-secondary-subtle">
+                                                    <i class="bi bi-eye-slash"></i>
+                                                </button>
+                                                <div class="invalid-feedback">
+                                                    กรุณากรอกรหัสผ่าน
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12 col-md-6 col-lg-6">
+                                             <span>ยืนยันรหัสผ่าน <span class="text-danger">*</span>
+                                            <div class="input-group has-validation mb-3">
+                                                <input type="password" name="cfPass" id="cfPass" required
+                                                     autocomplete="off" placeholder="ยืนยันรหัสผ่าน"
+                                                    class="form-control form-control-lg fs-6 ">
+                                                <button type="button" id="BtnCfPass"
+                                                    class="btn btn-outline-secondary border-secondary-subtle">
+                                                    <i class="bi bi-eye-slash"></i>
+                                                </button>
+                                                <div class="invalid-feedback">
+                                                    กรุณายืนยันรหัสผ่าน
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+
+                                        <div class="col-12">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" name="IdenCode" id="IdenCode" required
+                                                     autocomplete="off" placeholder="" class="form-control ">
+                                                <label for="userEmail">เลขบัตรประชาชน <span class="text-danger">*</span></label>
+                                                <div class="invalid-feedback">
+                                                    กรุณากรอกเลขบัตรประชาชน
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+
+                                        <div class="col-12">
+                                            <div class="form-floating mb-3">
+                                                <input type="email" name="email" id="email" 
+                                                     autocomplete="off" placeholder="" class="form-control ">
+                                                <label for="userEmail">อีเมล (ไม่บังคับ)</label>
+                                                <div class="invalid-feedback">
+                                                    กรุณากรอกอีเมล
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="row justify-content-center">
+                                        <div class="col-6 ">
+                                            <button type="submit" class="btn btn-success w-100 p-2">สมัคร</button>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-12 text-center">
+                                            มีบัญชีอยู่แล้ว ?&nbsp;
+                                            <a href="login">เข้าสู่ระบบ</a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script type="module" src="assets/js/regis.js" defer></script>
+</body>
+
+</html>

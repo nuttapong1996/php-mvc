@@ -1,0 +1,28 @@
+#contents-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  
+}
+
+#side-nav {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+}
+
+#side-nav .active{
+  background:  #1d4c93!important;
+  color: white!important;
+}
+
+@media screen and (max-width: 768px) {
+  #contents-wrapper {
+    flex-direction: column;
+  }
+
+  #side-nav {
+    display: none;
+    overflow: hidden;
+  }
+}

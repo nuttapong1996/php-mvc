@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="block-all-mixed-content">
+    <title>PHP MVC Template</title>
+</head>
+
+<body class="ibm-plex-sans-thai-regular">
+    <main class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-8 col-lg-6">
+                <div class="row justify-content-center mt-5">
+                    <div class="col-9">
+                        <img src="assets/imgs/logo.png" alt="logo" class="img-fluid">
+                    </div>
+                </div>
+                <div class="row p-3 mt-3">
+                    <div class="card border-0 shadow">
+                        <div class="card-body">
+                            <div class="card-title">
+                                <h4 class="text-center">เข้าสู่ระบบ</h4>
+                            </div>
+                            <form id="loginForm" class="needs-validation" novalidate>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="form-floating mb-3">
+                                            <input class="form-control" type="text" name="username" id="username"
+                                                autocomplete="off" required placeholder="username">
+                                            <label for="username">Username</label>
+                                            <div class="invalid-feedback">
+                                                กรุณากรอกรหัสพนักงาน
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="input-group has-validation mb-3">
+                                            <input class="form-control form-control-lg fs-6" type="password"
+                                                name="password" id="password" required placeholder="Password">
+                                            <button class="btn btn-outline-secondary border-secondary-subtle"
+                                                type="button" id="BtnPass">
+                                                <i class="bi bi-eye-slash"></i>
+                                            </button>
+                                            <div class="invalid-feedback">
+                                                กรุณากรอกรหัสผ่าน
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-6 col-lg-6 mb-3">
+                                        <a href="forgot">ลืมรหัสผ่าน ?</a>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6 col-lg-6 mb-3">
+                                        <button class="btn btn-primary w-100" type="submit" id="btnLogin">
+                                            เข้าสู่ระบบ</button>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-12 text-center mt-2">
+                                        <p class="text-center">ยังไม่มีบัญชี ?
+                                            <a href="register">สมัครสมาชิก</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </form>
+                            <!-- <div class="d-flex flex-column justify-content-center align-content-center" id="pcAndroid">
+                                <small class="text-center">PC / Android กดที่นี่เพื่อติดตั้งแอพฯ </small>
+                                <button class="btn btn-sq-navy-outline"> <i class="fas fa-download"></i> ติดตั้งแอพฯ</button>
+                            </div> -->
+                        </div>
+
+                        <div class="card-footer p-3 border-0 bg-white text-center">
+                            <div class="row ">
+                                <div class="col-12 text-center">
+                                    <small class="text-muted">Copyright &copy;
+                                        Sahakol Equipment PCL.</a>
+                                        <span id="cpDate"></span>
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <small class="text-muted"> Developed by ITMMSQHS</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class='bg-light bottom-0 fixed-bottom text-center align-middle p-3' id="pcAndroid" style="display: none;">
+            <small class="text-center">PC / Android กดที่นี่เพื่อติดตั้งแอพฯ </small>&nbsp;
+            <button class="btn btn-outline-success" id="installButton"> <i class="fas fa-download"></i> ติดตั้งแอพฯ</button>
+        </nav>
+
+        <nav class='bg-light bottom-0 fixed-bottom text-center align-middle p-3' id="iOSbaner" style="display: none;">
+            <p>การติดตั้งแอพฯสำหรับ iOS / iPad</p>
+            <small>1.คลิกที่ปุ่ม <i class="bi bi-box-arrow-up"></i> แชร์(Share) <br> 2.คลิกที่ปุ่ม <i class="far fa-plus-square"></i> เพิ่มไปยังหน้าโฮม (Add to Home)</small>
+        </nav>
+
+    </main>
+    <script type="module" src="assets/js/pwaInstall.js"></script>
+    <script type="module" src="assets/js/auth.js"></script>
+</body>
+
+</html>

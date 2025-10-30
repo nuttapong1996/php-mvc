@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap');
+
+.ibm-plex-sans-thai-thin {
+  font-family: "IBM Plex Sans Thai", serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.ibm-plex-sans-thai-extralight {
+  font-family: "IBM Plex Sans Thai", serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.ibm-plex-sans-thai-light {
+  font-family: "IBM Plex Sans Thai", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.ibm-plex-sans-thai-regular {
+  font-family: "IBM Plex Sans Thai", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ibm-plex-sans-thai-medium {
+  font-family: "IBM Plex Sans Thai", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.ibm-plex-sans-thai-semibold {
+  font-family: "IBM Plex Sans Thai", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.ibm-plex-sans-thai-bold {
+  font-family: "IBM Plex Sans Thai", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+:root {
+  --header-height: 52.69px;
+  --footer-height: 70px;
+  /* ถ้ามี footer ให้ใส่ค่า */
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.bg-sq-logo {
+  background: url('../imgs/logo-bg.png');
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: left;
+  background-size: cover;
+  /* Red with 50% opacity */
+}
+
+.bg-sq-navy-white {
+  background-color: #224788 !important;
+  color: white !important;
+}
+
+.bg-sq-white-navy {
+  background-color: white !important;
+  color: #224788 !important;
+}
+
+.text-sq-navy {
+  color: #224788 !important;
+}
+
+.border-sq-navy {
+  border-color: #224788 !important;
+}
+
+.btn-sq-navy {
+  background-color: #224788;
+  color: white;
+}
+
+.btn-sq-navy:hover {
+  border-color: #224788;
+  color: #224788;
+}
+
+.btn-sq-navy-outline {
+  border-color: #224788;
+  color: #224788;
+
+}
+
+.btn-sq-navy-outline:hover {
+  background-color: #224788;
+  color: white;
+}
+
+
+.blur-text {
+  color: transparent;
+  /* ทำให้ข้อความหายไป */
+  background: #eee;
+  /* สี placeholder */
+  border-radius: 4px;
+  display: inline-block;
+  width: 300px;
+  height: 20px;
+  filter: blur(2px);
+  /* ทำให้เบลอ */
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #eee;
+  }
+
+  50% {
+    background-color: #ddd;
+  }
+
+  100% {
+    background-color: #eee;
+  }
+}
+
+.loaded {
+  /* แสดงข้อความจริง */
+  background: none;
+  filter: blur(0);
+  animation: none;
+}
+
+#top-nav {
+  height: var(--header-height);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+#contents-main {
+  overflow-y: auto;
+  /* height: calc(100dvh - var(--header-height) - var(--footer-height)); */
+  height: calc(100dvh - var(--header-height) - var(--footer-height));
+}
+
+#mobile-nav {
+  display: none;
+  background-color: #224788;
+  height: var(--footer-height);
+}
+
+#mobile-nav .nav-link {
+  border-radius: 0;
+  /* ปกติไม่ต้องโค้ง */
+}
+
+#mobile-nav .nav-link.active {
+  background: #fff;
+  color: #1d4c93 !important;
+  border-radius: 10px 10px 0 0;
+  /* ปุ่ม active มุมโค้ง */
+}
+
+#mobile-nav i {
+  font-size: 22px;
+  line-height: 1;
+  margin-bottom: 2px;
+}
+
+#mobile-nav span.small {
+  display: block;
+
+  white-space: nowrap;
+  /* อนุญาตให้ขึ้นบรรทัดใหม่ */
+  line-height: 1.2;
+  /* ระยะบรรทัดไม่ชิดเกินไป */
+  text-align: center;
+  /* จัดกลาง */
+}
+
+@media screen and (max-width: 768px) {
+
+  #backhome-lg {
+    display: none;
+  }
+
+  #mobile-nav {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #1d4c93;
+    /* สีน้ำเงิน */
+    z-index: 1000;
+  }
+}
